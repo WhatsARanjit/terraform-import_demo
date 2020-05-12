@@ -95,6 +95,7 @@ terraform import aws_vpc.$TF_RESOURCE_NAME $VPC_ID
 
 ```shell
 terraform show -no-color > $TF_RESOURCE_NAME.tf
+cat $TF_RESOURCE_NAME.tf
 ```
 
 * We're overwriting the stub with real code
@@ -107,10 +108,6 @@ terraform apply -auto-approve
 **NOTE:** When running on a terminal, Terraform recognizes you are a human returns HCL.  When running inside of a script Terraform decides to return JSON instead.
 
 ### Run generated code
-
-```shell
-terraform apply -auto-approve
-```
 
 * We see that Terraform is unhappy because the code is specifying values for read-only attrbutes
 * Remove the read-only attributes from the code, which are:
