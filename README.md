@@ -113,7 +113,7 @@ terraform apply -auto-approve
 ```
 
 * We see that Terraform is unhappy because the code is specifying values for read-only attrbutes
-* Remove to read-only attributes from the code, which are:
+* Remove the read-only attributes from the code, which are:
   * `arn`
   * `default_network_acl_id`
   * `default_route_table_id`
